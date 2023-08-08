@@ -1,0 +1,76 @@
+{
+  "cities": [
+    {
+      "cityName": "Pail",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-07-23T09:00:57.244Z",
+      "notes": "",
+      "position": {
+        "lat": "30.750334678226892",
+        "lng": "75.93728210957183"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Chatru",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-07-23T09:01:04.536Z",
+      "notes": "",
+      "position": {
+        "lat": "33.63142195762139",
+        "lng": "75.38638238759653"
+      },
+      "id": 2
+    },
+    {
+      "cityName": "Leh",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-07-23T09:01:07.384Z",
+      "notes": "",
+      "position": {
+        "lat": "34.04961792238707",
+        "lng": "77.73642706114589"
+      },
+      "id": 3
+    },
+    {
+      "cityName": "Pakhapani, Myagdi",
+      "country": "Nepal",
+      "emoji": "🇳🇵",
+      "date": "2023-07-23T09:01:12.425Z",
+      "notes": "",
+      "position": {
+        "lat": "28.45396804551056",
+        "lng": "83.49425354592229"
+      },
+      "id": 4
+    },
+    {
+      "cityName": "Asin",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-07-24T16:45:58.289Z",
+      "notes": "",
+      "position": {
+        "lat": "42.261049162113856",
+        "lng": "-1.0546875000000002"
+      },
+      "id": 5
+    },
+    {
+      "cityName": "Toro",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-07-24T16:46:15.454Z",
+      "notes": "",
+      "position": {
+        "lat": "41.409775832009565",
+        "lng": "-5.51513671875"
+      },
+      "id": 6
+    }
+  ]
+}
