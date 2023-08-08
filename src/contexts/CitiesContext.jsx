@@ -6,6 +6,13 @@ import {
   useReducer,
 } from "react";
 
+import {
+  fetchCity as fetchCityById,
+  createCity as createNewCity,
+  deleteCity as deleteCityById,
+  fetchCities as getAllCities,
+} from "../services/cities";
+
 const CityContext = createContext();
 
 const BASE_URL = "http://localhost:8000";
@@ -60,8 +67,8 @@ function CitiesProvider({ children }) {
       async function fetchCity() {
         try {
           dispatch({ type: "loading" });
-          const res = await fetch(`${BASE_URL}/cities/${id}`);
-          const data = await res.json();
+          const data = await fetchCityById(id);
+          console.log(data);
           dispatch({ type: "city/loaded", payload: data });
         } catch (err) {
           dispatch({
@@ -79,14 +86,7 @@ function CitiesProvider({ children }) {
   async function createCity(newCity) {
     try {
       dispatch({ type: "loading" });
-      const res = await fetch(`${BASE_URL}/cities/`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
+      const data = await createNewCity(newCity);
       dispatch({ type: "city/created", payload: data });
     } catch (err) {
       dispatch({
@@ -99,12 +99,8 @@ function CitiesProvider({ children }) {
   async function deleteCity(id) {
     try {
       dispatch({ type: "loading" });
-      const res = await fetch(`${BASE_URL}/cities/${id}`, {
-        method: "DELETE",
-      });
-      const data = await res.json();
+      const data = await deleteCityById(id);
       dispatch({ type: "city/deleted", payload: id });
-      console.log(data);
     } catch (err) {
       dispatch({
         type: "rejected",
@@ -117,8 +113,7 @@ function CitiesProvider({ children }) {
     async function fetchCities() {
       try {
         dispatch({ type: "loading" });
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
+        const data = await getAllCities();
         dispatch({ type: "cities/loaded", payload: data });
       } catch (err) {
         dispatch({
